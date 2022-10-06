@@ -55,15 +55,6 @@ class MainActivity : AppCompatActivity() {
                 requestReadStoragePermission()
             }
         }
-
-//        binding.ibSave.setOnClickListener {
-//                requestWriteStoragePermission()
-//            Snackbar.make(
-//                binding.root,
-//                "Saved to Gallery",
-//                Snackbar.LENGTH_SHORT
-//            ).show()
-//        }
         binding.ibSave.setOnClickListener {
             requestWriteStoragePermission()
             if(isReadStorageAllowed()){
@@ -217,5 +208,3 @@ class MainActivity : AppCompatActivity() {
         return toSave
     }
 }
-
-
