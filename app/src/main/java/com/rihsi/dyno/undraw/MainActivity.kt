@@ -168,49 +168,6 @@ class MainActivity : AppCompatActivity() {
         view.draw(canvas)
         return returnedBitmap
     }
-//    private suspend fun saveBitmapFile(mBitmap: Bitmap?): String{
-//        var toSave = ""
-//        withContext(Dispatchers.IO){
-//            if(mBitmap !=null){
-//                try {
-//                    val bytes = ByteArrayOutputStream()
-//                    mBitmap.compress(Bitmap.CompressFormat.PNG,90,bytes)
-//
-//                    val f = File(externalCacheDir?.absoluteFile.toString()
-//                    + File.separator + "UndrawApp_" + System.currentTimeMillis() /1000 + ".png"
-//                    )
-//
-//                    val fo = FileOutputStream(f)
-//                    fo.write(bytes.toByteArray())
-//                    fo.close()
-//
-//                    toSave = f.absolutePath
-//
-//                    runOnUiThread {
-//                        if(toSave.isNotEmpty()){
-//                            Toast.makeText(
-//                                this@MainActivity,
-//                                "File Saved Successfully : $toSave",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
-//                        }
-//                        else{
-//                            Toast.makeText(
-//                                this@MainActivity,
-//                                "Some thing went wrong in saving the file.",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
-//                        }
-//                    }
-//                }
-//                catch(e: Exception){
-//                    toSave = ""
-//                    e.printStackTrace()
-//                }
-//            }
-//        }
-//        return toSave
-//    }
 private fun saveMediaToStorage(bitmap: Bitmap){
     val filename = "${System.currentTimeMillis()}.png"
     var fos: OutputStream? =null
