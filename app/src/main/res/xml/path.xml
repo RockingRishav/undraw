@@ -2,5 +2,7 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
    <external-path
        name="captured"
-       path="Android/media/com.rihsi.dyno.undraw/files"/>
+       path="Android/media/com.rihsi.dyno.undraw/files"
+                  />
+   
 </paths>
