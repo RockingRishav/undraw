@@ -21,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <provider
             android:authorities="com.rihsi.dyno.undraw.fileprovider"
             android:name="androidx.core.content.FileProvider"
@@ -30,7 +31,9 @@
             <meta-data
                 android:name = "android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/path"/>
+                
         </provider>
+        
     </application>
-
+    
 </manifest>
