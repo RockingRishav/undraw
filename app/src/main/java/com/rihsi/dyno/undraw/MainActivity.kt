@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     var curentImageUri : Uri? = null
-    var checkforshare=0
+    var checkForShare=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.ibSave.setOnClickListener {
-            checkforshare=0
+            checkForShare=0
             requestWriteStoragePermission()
             if(isReadStorageAllowed()){
                 lifecycleScope.launch {
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
             binding.ibShare.setOnClickListener{
-            checkforshare=1
+            checkForShare=1
             requestWriteStoragePermission()
             if(isReadStorageAllowed()){
                 lifecycleScope.launch {
@@ -207,7 +207,7 @@ private fun saveMediaToStorage(bitmap: Bitmap){
 
     fos?.use {
         bitmap.compress(Bitmap.CompressFormat.PNG,90,it)
-        if(checkforshare==0){
+        if(checkForShare==0){
             Toast.makeText(this, "Saved To Gallery" , Toast.LENGTH_SHORT).show()
         }
         else{
