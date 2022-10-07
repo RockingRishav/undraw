@@ -9,7 +9,6 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
-import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -82,6 +81,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 
     private fun requestWriteStoragePermission() {
@@ -196,6 +196,7 @@ private fun saveMediaToStorage(bitmap: Bitmap){
             val imageUri: Uri? = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
             fos = imageUri?.let { resolver.openOutputStream(it) }
             curentImageUri = imageUri
+
         }
     }
     else {
@@ -222,3 +223,4 @@ private fun saveMediaToStorage(bitmap: Bitmap){
             startActivity(Intent.createChooser(shareIntent, "Share"))
         }
 }
+
